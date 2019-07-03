@@ -71,6 +71,14 @@ function imHungry() {
     } 
 } 
 
+$('#myform').submit(function(e) {
+    let userName = $("#input_name").val();
+    event.preventDefault();
+    console.log(userName);
+    $('#userNameHere').append(userName);
+});
+
+
 //initializing the game
 $('#Load').on('click', (e) => {
     console.log($(e.target));
@@ -88,19 +96,19 @@ $('#Start').on('click', (e) => {
             $(e.currentTarget).hide();}
         timer = setInterval(function(){
             seconds ++;
-            if(seconds % 1 === 0){
+            if(seconds % 2 === 0){
                 game.tomagochiArray[0].hunger ++; 
             }
-            if(seconds % 1 === 0){
+            if(seconds % 2 === 0){
                 game.tomagochiArray[0].sleepyness ++;
             } 
-            if(seconds % 1 === 0){
+            if(seconds % 2 === 0){
                 game.tomagochiArray[0].boredom ++;
             }
             if(seconds % 10 === 0){
                 game.tomagochiArray[0].age ++;
             } 
-        // this is adding the seconds to the html page in h1
+        // this is appending the seconds to the html page in h1
             $('#clock').text(seconds);
             $('#hungry-stat').text(game.tomagochiArray[0].hunger)
             $('#bored-stat').text(game.tomagochiArray[0].boredom);

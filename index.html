@@ -6,36 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
-</head>
+</head> 
 <body>
     <h1> tomagachi game test</h1>
+    
+    <form id="myform">
+        <input type="text" id="input_name"/>
+        <input type="submit" id="submit" value="submit" />
+    </form>
+    <div>
+        <p id="userNameHere"></p>
+    </div>
+
     <div>
         <button id="Load">Load your tomagachi!</button>
     </div>
-    <div>
-        <button id="Start">Start the Game</button>
-    </div> 
-   
-    <h2> game clock <span id="clock">0</span></h2>
-    <h2> pet age: <span id="pet-age">0</span></h2>
-    
-    <h3>Creature Stats</h3>    
-        <div class="stats">
-            <button id="hunger">Feed Me!</button>
-            <div id="hungry-stat">0</div>
+    <div class="the-game-objects">
+        <div>
+            <button id="Start">Start the Game</button>
         </div> 
-        <div class="stats">
-            <button id="bored">Play With Me!</button>
-            <div id="bored-stat">0</div>
+   
+        <h2> game clock <span id="clock">0</span></h2>
+        <h2> pet age: <span id="pet-age">0</span></h2>
+    
+        <h3>Creature Stats</h3>    
+            <div class="stats">
+                <button id="hunger">Feed Me!</button>
+                <div id="hungry-stat">0</div>
+        </div> 
+            <div class="stats">
+                <button id="bored">Play With Me!</button>
+                <div id="bored-stat">0</div>
         </div>  
-        <div class="stats">
-            <button id="sleepyness">Let Me Sleep!</button>
-            <div id="sleepyness-stat">0<h3/div>
+            <div class="stats">
+                <button id="sleepyness">Let Me Sleep!</button>
+                <div id="sleepyness-stat">0<h3/div>
         </div>
         <div>
             <button id="Reload">Try Again</button>
         </div>
-        
+    </div>
     <script src="js/player.js"></script>
     <script src="js/app.js"></script>
 </body>
