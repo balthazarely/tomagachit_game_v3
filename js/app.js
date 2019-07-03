@@ -15,7 +15,7 @@ const game = {
         console.log(this.tomagochiArray)  
     }}
 
-// reload the page function // got from StackOverflow
+// reload the page function
 $('#Reload').click(function() {
     location.reload();
  });
@@ -76,7 +76,9 @@ $('#myform').submit(function(e) {
     let userName = $("#input_name").val();
     event.preventDefault();
     console.log(`the player has chosen the name ${userName}`);
-    $('#userNameHere').append(userName);
+    $('#userNameHere').append(`hello my name is ${userName}`);
+    if(e.target.id === 'myform') {
+        $(e.currentTarget).hide();}
 });
 
 
