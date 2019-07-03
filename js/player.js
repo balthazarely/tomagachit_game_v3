@@ -17,9 +17,12 @@ class Tomagochi {
         $('#grid').append($div);
         this.$location = $div;
     }
-    // amHealthy () {
-    //     if(this.health > 5) {
-    //         console.log('you are unhealthy, game over!');
-    //         }
-    //     } 
+    ender(){
+        if(this.health > 2){
+            console.log("You are a terrible pet owner, your friend has died due to your failure");
+        }
+    //     if(this.hunger > 5){
+    //         alert("you die bro");
+    //     }
     }
+}
