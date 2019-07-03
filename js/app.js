@@ -71,10 +71,11 @@ function imHungry() {
     } 
 } 
 
+//this takes username and appends to page
 $('#myform').submit(function(e) {
     let userName = $("#input_name").val();
     event.preventDefault();
-    console.log(userName);
+    console.log(`the player has chosen the name ${userName}`);
     $('#userNameHere').append(userName);
 });
 
@@ -88,6 +89,7 @@ $('#Load').on('click', (e) => {
     }
 })
 
+// Starting the game 
 $('#Start').on('click', (e) => {
     console.log($(e.target));
     if(!watchIsRunning){
@@ -128,6 +130,5 @@ giveSleep();
 
 
     // things that need to be added
-        // way to get the user to add name and add it to the page
         // need to hide everything until load tamagahci button pressed
         // all the css, etc.
