@@ -11,8 +11,8 @@ const game = {
         newCharacture.greetings();
         // console.log(this, '<---this');
         this.tomagochiArray.push(newCharacture)
-        console.log(newCharacture);
-        console.log(this.tomagochiArray)  
+        // console.log(newCharacture);
+        // console.log(this.tomagochiArray)  
     }}
 
 // reload the page function
@@ -39,33 +39,27 @@ function giveSleep() {
 // Functions to test conditions
 function imBored() {
     if(game.tomagochiArray[0].boredom > 9) {
-        console.log('I died of boredom. didnt think that was possible');
         alert('I died of boredom. didnt think that was possible');
         clearInterval(timer);
     } else if (game.tomagochiArray[0].boredom < 0) {
-        console.log('I died from overaly stimulated');
         alert('I died from overaly stimulated');
         clearInterval(timer);
     } 
 } 
 function imSleepy() {
     if(game.tomagochiArray[0].sleepyness > 9) {
-        console.log('I died from exhaustion');
         alert('I died from exhaustion');
         clearInterval(timer);
     } else if (game.tomagochiArray[0].sleepyness < 0) {
-        console.log('I am dead cause i overslept');
         alert('I am dead cause i overslept');
         clearInterval(timer);
     } 
 } 
 function imHungry() {
     if(game.tomagochiArray[0].hunger > 9) {
-        console.log('I starved, snt that fun');
         alert('I starved, isnt that fun');
         clearInterval(timer);
     } else if (game.tomagochiArray[0].hunger < 0) {
-        console.log('I died from obesity');
         alert('I died from obesity');
         clearInterval(timer);
     } 
@@ -76,15 +70,14 @@ $('#myform').submit(function(e) {
     let userName = $("#input_name").val();
     event.preventDefault();
     console.log(`the player has chosen the name ${userName}`);
-    $('#userNameHere').append(`hello my name is ${userName}`);
+    $('#userNameHere').append(`${userName} says: "hello world " `);
     if(e.target.id === 'myform') {
         $(e.currentTarget).hide();}
 });
 
-
 //initializing the game
 $('#Load').on('click', (e) => {
-    console.log($(e.target));
+    // console.log($(e.target));
     if(e.target.tagName === 'BUTTON') {
     $(e.currentTarget).hide();
     game.createNewCharacture();
@@ -93,20 +86,20 @@ $('#Load').on('click', (e) => {
 
 // Starting the game 
 $('#Start').on('click', (e) => {
-    console.log($(e.target));
+    console.log("Lets start the game!");
     if(!watchIsRunning){
         watchIsRunning = true;
         if(e.target.id === 'Start') {
             $(e.currentTarget).hide();}
         timer = setInterval(function(){
             seconds ++;
-            if(seconds % 2 === 0){
+            if(seconds % 1 === 0){
                 game.tomagochiArray[0].hunger ++; 
             }
-            if(seconds % 2 === 0){
+            if(seconds % 1 === 0){
                 game.tomagochiArray[0].sleepyness ++;
             } 
-            if(seconds % 2 === 0){
+            if(seconds % 1 === 0){
                 game.tomagochiArray[0].boredom ++;
             }
             if(seconds % 10 === 0){
@@ -122,6 +115,7 @@ $('#Start').on('click', (e) => {
             imBored();
             imHungry();
             imSleepy();
+            iDead();
         }, 1000)
     }})
 
@@ -129,6 +123,27 @@ $('#Start').on('click', (e) => {
 giveFood();
 giveEntertainment();
 giveSleep();
+
+//this takes the death and appends to page
+function iDead (){
+    if(game.tomagochiArray[0].sleepyness > 9) {
+        $('#death').append("You are a sicko that makes me sleep all the time. of course im dead");
+    } else if(game.tomagochiArray[0].hunger > 9) {
+        $('#death').append("well if you dont feed me, im gonna die. just like a real person");
+    } else if(game.tomagochiArray[0].boredom > 9) {
+        $('#death').append("its true, you can get so bored you atually die");
+    } else if(game.tomagochiArray[0].sleepyness < 0) {
+        $('#death').append("i am no rave creature, i must sleep at some point. i died");
+    } else if(game.tomagochiArray[0].hunger < 0) {
+        $('#death').append("more people die in america from being overed rather than under.... like me");
+    } else if(game.tomagochiArray[0].boredom < 0) {
+        $('#death').append("i appreciated all the play time, but it oddly killed me");
+    }
+};
+    
+
+
+
 
 
     // things that need to be added

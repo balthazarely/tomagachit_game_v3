@@ -7,6 +7,7 @@ class Tomagochi {
         this.age = 0;
     }
     greetings(){
-        console.log("hello world, i am your new friend");
+        console.log("Hi, i plan to be a good friend to you, assuming that you feed me, let me sleep, and make sure i dont get too bored");
+        
 }
 }
