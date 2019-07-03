@@ -15,6 +15,11 @@ const game = {
         console.log(this.tomagochiArray)  
     }}
 
+// reload the page function // got from StackOverflow
+$('#Reload').click(function() {
+    location.reload();
+ });
+
 // Functions to reduce stats 
 function giveFood() {
     $('#hunger').click(function() {
@@ -43,15 +48,14 @@ function imBored() {
         clearInterval(timer);
     } 
 } 
-
 function imSleepy() {
     if(game.tomagochiArray[0].sleepyness > 9) {
-        console.log('I am dead cause i overslept');
-        alert('I am dead cause i overslept');
+        console.log('I died from exhaustion');
+        alert('I died from exhaustion');
         clearInterval(timer);
     } else if (game.tomagochiArray[0].sleepyness < 0) {
-        console.log('I am so awake i died');
-        alert('I am so awake i died');
+        console.log('I am dead cause i overslept');
+        alert('I am dead cause i overslept');
         clearInterval(timer);
     } 
 } 
@@ -76,15 +80,18 @@ $('#Load').on('click', (e) => {
     }
 })
 
-$('#Start').click(function() {
+$('#Start').on('click', (e) => {
+    console.log($(e.target));
     if(!watchIsRunning){
         watchIsRunning = true;
+        if(e.target.id === 'Start') {
+            $(e.currentTarget).hide();}
         timer = setInterval(function(){
             seconds ++;
             if(seconds % 1 === 0){
                 game.tomagochiArray[0].hunger ++; 
             }
-            if(seconds % 2 === 0){
+            if(seconds % 1 === 0){
                 game.tomagochiArray[0].sleepyness ++;
             } 
             if(seconds % 1 === 0){
@@ -98,7 +105,7 @@ $('#Start').click(function() {
             $('#hungry-stat').text(game.tomagochiArray[0].hunger)
             $('#bored-stat').text(game.tomagochiArray[0].boredom);
             $('#sleepyness-stat').text(game.tomagochiArray[0].sleepyness);
-            $('span').text(game.tomagochiArray[0].age);
+            $('#pet-age').text(game.tomagochiArray[0].age);
         // this is testing our creatures condtions
             imBored();
             imHungry();
@@ -112,7 +119,7 @@ giveEntertainment();
 giveSleep();
 
 
-
     // things that need to be added
         // way to get the user to add name and add it to the page
+        // need to hide everything until load tamagahci button pressed
         // all the css, etc.
