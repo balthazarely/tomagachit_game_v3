@@ -3,7 +3,6 @@ let timer = 0;
 let seconds = 0;
 let watchIsRunning = false;
 
-
 // The Game Object
 const game = {
     tomagochiArray: [],
@@ -16,45 +15,56 @@ const game = {
         console.log(this.tomagochiArray)  
     }}
 
-
 // Functions to reduce stats 
 function giveFood() {
     $('#hunger').click(function() {
-         game.tomagochiArray[0].hunger = game.tomagochiArray[0].hunger -2;
+         game.tomagochiArray[0].hunger = game.tomagochiArray[0].hunger -1;
 })}
 
 function giveEntertainment() {
     $('#bored').click(function() {
-         game.tomagochiArray[0].boredom = game.tomagochiArray[0].boredom -2;
+         game.tomagochiArray[0].boredom = game.tomagochiArray[0].boredom -1;
 })}
 
 function giveSleep() {
     $('#sleepyness').click(function() {
-         game.tomagochiArray[0].sleepyness = game.tomagochiArray[0].sleepyness -2;
+         game.tomagochiArray[0].sleepyness = game.tomagochiArray[0].sleepyness -1;
 })}
 
 // Functions to test conditions
 function imBored() {
-    if(game.tomagochiArray[0].boredom > 2) {
-        console.log('I am so bored, game over!');
+    if(game.tomagochiArray[0].boredom > 9) {
+        console.log('I died of boredom. didnt think that was possible');
+        alert('I died of boredom. didnt think that was possible');
         clearInterval(timer);
-    } else if(game.tomagochiArray[0].boredom < -1) {
-        console.log('I am overaly stimulated, game over!');
-}
+    } else if (game.tomagochiArray[0].boredom < 0) {
+        console.log('I died from overaly stimulated');
+        alert('I died from overaly stimulated');
+        clearInterval(timer);
+    } 
 } 
 
 function imSleepy() {
-    if(game.tomagochiArray[0].sleepyness > 2) {
-    //     console.log('I am so tired, game over!');
-    //     clearInterval(timer);
-    }
+    if(game.tomagochiArray[0].sleepyness > 9) {
+        console.log('I am dead cause i overslept');
+        alert('I am dead cause i overslept');
+        clearInterval(timer);
+    } else if (game.tomagochiArray[0].sleepyness < 0) {
+        console.log('I am so awake i died');
+        alert('I am so awake i died');
+        clearInterval(timer);
+    } 
 } 
-
 function imHungry() {
-    if(game.tomagochiArray[0].hunger > 3) {
-        // console.log('I am so hungry, game over!');
-        // clearInterval(timer);
-    }
+    if(game.tomagochiArray[0].hunger > 9) {
+        console.log('I starved, snt that fun');
+        alert('I starved, isnt that fun');
+        clearInterval(timer);
+    } else if (game.tomagochiArray[0].hunger < 0) {
+        console.log('I died from obesity');
+        alert('I died from obesity');
+        clearInterval(timer);
+    } 
 } 
 
 //initializing the game
@@ -66,22 +76,21 @@ $('#Load').on('click', (e) => {
     }
 })
 
-
 $('#Start').click(function() {
     if(!watchIsRunning){
         watchIsRunning = true;
         timer = setInterval(function(){
             seconds ++;
-            if(seconds % 3 === 0){
+            if(seconds % 1 === 0){
                 game.tomagochiArray[0].hunger ++; 
             }
             if(seconds % 2 === 0){
                 game.tomagochiArray[0].sleepyness ++;
             } 
-            if(seconds % 2 === 0){
+            if(seconds % 1 === 0){
                 game.tomagochiArray[0].boredom ++;
             }
-            if(seconds % 8 === 0){
+            if(seconds % 10 === 0){
                 game.tomagochiArray[0].age ++;
             } 
         // this is adding the seconds to the html page in h1
@@ -97,7 +106,6 @@ $('#Start').click(function() {
         }, 1000)
     }})
 
-
 //These are decreasing the values of our stats via buttons
 giveFood();
 giveEntertainment();
@@ -106,6 +114,5 @@ giveSleep();
 
 
     // things that need to be added
-        // mechanism to end the game once the player has hit too much of a number
         // way to get the user to add name and add it to the page
         // all the css, etc.
