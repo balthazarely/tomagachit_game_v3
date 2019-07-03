@@ -1,41 +1,9 @@
-//initializing the game
-$('#Load').on('click', (e) => {
-    console.log($(e.target));
-    if(e.target.tagName === 'BUTTON') {
-    $(e.currentTarget).hide();
-    game.createNewCharacture();
-}
-})
-
-    $('#Start').click(function() {
-        if(!watchIsRunning){
-            watchIsRunning = true;
-            timer = setInterval(function(){
-                // console.log(game.tomagochiArray[0]); 
-                game.tomagochiArray[0].hunger ++; 
-                game.tomagochiArray[0].sleepyness ++; 
-                game.tomagochiArray[0].boredom ++; 
-
-    //  this is adding the seconds to the html page in h1
-     $('#healthy-stat').text(game.tomagochiArray[0].hunger)
-     $('#happy-stat').text(game.tomagochiArray[0].sleepyness);
-     $('#feed-stat').text( game.tomagochiArray[0].boredom);
-    //  $('span').text(creatureAge);
-    // this is testing our creatures condtions
-    imBored();
-    imHungry();
-    imSleepy();
-    }, 1000)
-    }})
-
-
-
 let timer = 0;
 let seconds = 0;
 let watchIsRunning = false;
 
 
-// 
+// The Game Object
 const game = {
     tomagochiArray: [],
     createNewCharacture(){
@@ -48,23 +16,68 @@ const game = {
     }   
 }
 
+// Gloabl Functions
 function imBored() {
     if(game.tomagochiArray[0].boredom > 1) {
-        console.log('I am so bored, game over!');
+        // console.log('I am so bored, game over!');
     }
 } 
-
 function imSleepy() {
     if(game.tomagochiArray[0].sleepyness > 2) {
-        console.log('I am so tired, game over!');
+        // console.log('I am so tired, game over!');
+    }
+} 
+function imHungry() {
+    if(game.tomagochiArray[0].hunger > 3) {
+        // console.log('I am so hungry, game over!');
     }
 } 
 
-function imHungry() {
-    if(game.tomagochiArray[0].hunger > 3) {
-        console.log('I am so hungry, game over!');
-    }
-} 
+function giveFood() {
+    $('#hunger').click(function() {
+         game.tomagochiArray[0].hunger = game.tomagochiArray[0].hunger -2;
+})}
+
+function giveEntertainment() {
+    $('#bored').click(function() {
+         game.tomagochiArray[0].boredom = game.tomagochiArray[0].boredom -2;
+})}
+
+function giveSleep() {
+    $('#sleepyness').click(function() {
+         game.tomagochiArray[0].sleepyness = game.tomagochiArray[0].sleepyness -2;
+})}
+
+
+//initializing the game
+$('#Load').on('click', (e) => {
+    console.log($(e.target));
+    if(e.target.tagName === 'BUTTON') {
+    $(e.currentTarget).hide();
+    game.createNewCharacture();
+}})
+$('#Start').click(function() {
+    if(!watchIsRunning){
+        watchIsRunning = true;
+        timer = setInterval(function(){
+            // console.log(game.tomagochiArray[0]); 
+            game.tomagochiArray[0].hunger ++; 
+            game.tomagochiArray[0].sleepyness ++; 
+            game.tomagochiArray[0].boredom ++; 
+    //  this is adding the seconds to the html page in h1
+        $('#hungry-stat').text(game.tomagochiArray[0].hunger)
+        $('#bored-stat').text(game.tomagochiArray[0].boredom);
+        $('#sleepyness-stat').text( game.tomagochiArray[0].sleepyness);
+    //  $('span').text(creatureAge);
+    // this is testing our creatures condtions
+        imBored();
+        imHungry();
+        imSleepy();
+    }, 1000)
+    }})
+    giveFood();
+    giveEntertainment();
+    giveSleep();
 
 // //global variables
 // 
