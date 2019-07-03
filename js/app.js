@@ -22,9 +22,9 @@ $('#Load').on('click', (e) => {
      $('#feed-stat').text( game.tomagochiArray[0].boredom);
     //  $('span').text(creatureAge);
     // this is testing our creatures condtions
-    amHealthy();
-    amHappy();
-    amHungry();
+    imBored();
+    imHungry();
+    imSleepy();
     }, 1000)
     }})
 
@@ -35,7 +35,7 @@ let seconds = 0;
 let watchIsRunning = false;
 
 
-
+// 
 const game = {
     tomagochiArray: [],
     createNewCharacture(){
@@ -48,7 +48,23 @@ const game = {
     }   
 }
 
+function imBored() {
+    if(game.tomagochiArray[0].boredom > 1) {
+        console.log('I am so bored, game over!');
+    }
+} 
 
+function imSleepy() {
+    if(game.tomagochiArray[0].sleepyness > 2) {
+        console.log('I am so tired, game over!');
+    }
+} 
+
+function imHungry() {
+    if(game.tomagochiArray[0].hunger > 3) {
+        console.log('I am so hungry, game over!');
+    }
+} 
 
 // //global variables
 // 
