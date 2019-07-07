@@ -70,7 +70,7 @@ $('#myform').submit(function(e) {
     let userName = $("#input_name").val();
     event.preventDefault();
     console.log(`the player has chosen the name ${userName}`);
-    $('#userNameHere').append(`${userName} says: "hello world " `);
+    $('#userNameHere').append(`${userName}`);
     if(e.target.id === 'myform') {
         $(e.currentTarget).hide();}
 });
@@ -81,6 +81,7 @@ $('#Load').on('click', (e) => {
     if(e.target.tagName === 'BUTTON') {
     $(e.currentTarget).hide();
     game.createNewCharacture();
+    
 }})
 
 // Starting the game 

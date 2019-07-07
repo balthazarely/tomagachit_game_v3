@@ -15,16 +15,13 @@ button {
     position: absolute;
 }
 
-.main-image {
-    position: relative;
-    width: 100%;   
-}
 
 .right-info {
     position: absolute; 
     top: 220px;
     right: 50px;
     width; 100%;
+    float: right;
 }
 
 .left-info {

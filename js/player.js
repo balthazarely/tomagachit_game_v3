@@ -8,6 +8,6 @@ class Tomagochi {
     }
     greetings(){
         console.log("Hi, i plan to be a good friend to you, assuming that you feed me, let me sleep, and make sure i dont get too bored");
-        
+        console.log(this.tomagochiArray);
 }
 }

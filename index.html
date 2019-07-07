@@ -26,8 +26,6 @@
                     <input type="text" id="input_name"/>
                     <input type="submit" id="submit" value="submit" />
                 </form>
-            <div>
-                <h2 id="userNameHere"></h2>
             </div>  
             <div>
                 <button id="Load">Load your tomagachi!</button>
@@ -41,7 +39,7 @@
 
     <div class="container-fluid">
            <div class=col-md-12>
-                <img src="/Users/balthazarely/school/sei_autumn_sweaters/classwork/7_2/tomagotchi_project_3/images/game_bg.png" class="img-fluid img-thumbnail" id="main-image"></div>
+                <img src="/Users/balthazarely/school/sei_autumn_sweaters/classwork/7_2/tomagotchi_project_3/images/game_bg.png" class="img-fluid img-thumbnail main-image" id="main-image"></div>
            </div>
     </div>
     <div>
@@ -51,13 +49,14 @@
     <div>
     </div>
     <div class="right-info">
+            <h2> game clock <span id="clock">0</span></h2>
             <h2> pet age: <span id="pet-age">0</span></h2>
             <h4><div id="hungry-stat">0</div></h4>
             <h4><div id="bored-stat">0</div></h4>
             <h4><div id="sleepyness-stat">0</div></h4>
         </div>
         <div class="left-info">
-            <h2> game clock <span id="clock">0</span></h2>
+            <h2 id="userNameHere"></h2>
             <div><button id="hunger">Feed Me!</button></div>
             <div><button id="bored">Play With Me!</button></div>
             <div><button id="sleepyness">Let Me Sleep!</button></div>
