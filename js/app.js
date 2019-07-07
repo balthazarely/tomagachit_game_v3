@@ -81,8 +81,7 @@ $('#Load').on('click', (e) => {
     if(e.target.tagName === 'BUTTON') {
     $(e.currentTarget).hide();
     game.createNewCharacture();
-    }
-})
+}})
 
 // Starting the game 
 $('#Start').on('click', (e) => {
@@ -140,12 +139,8 @@ function iDead (){
         $('#death').append("i appreciated all the play time, but it oddly killed me");
     }
 };
-    
-
-
-
-
 
     // things that need to be added
         // need to hide everything until load tamagahci button pressed
         // all the css, etc.
+        // write instructions

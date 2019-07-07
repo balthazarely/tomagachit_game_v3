@@ -1,0 +1,31 @@
+.game-header {
+    text-align: center;
+    height: 100px;
+}
+
+.score {
+    top: 150px;
+    right: 40px;
+    position: absolute;
+}
+
+
+
+.main-image {
+    position: relative;
+    width: 100%;   
+}
+
+.right-info {
+    position: absolute; 
+    top: 130px;
+    right: 50px;
+    width; 100%;
+}
+
+.left-info {
+    position: absolute; 
+    top: 130px;
+    left: 50px;
+    width; 100%;
+}
