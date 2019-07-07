@@ -41,27 +41,33 @@ function imBored() {
     if(game.tomagochiArray[0].boredom > 9) {
         alert('I died of boredom. didnt think that was possible');
         clearInterval(timer);
+        $('.dancing').hide();
     } else if (game.tomagochiArray[0].boredom < 0) {
         alert('I died from overaly stimulated');
         clearInterval(timer);
+        $('.dancing').hide();
     } 
 } 
 function imSleepy() {
     if(game.tomagochiArray[0].sleepyness > 9) {
         alert('I died from exhaustion');
         clearInterval(timer);
+        $('.dancing').hide();
     } else if (game.tomagochiArray[0].sleepyness < 0) {
         alert('I am dead cause i overslept');
         clearInterval(timer);
+        $('.dancing').hide();
     } 
 } 
 function imHungry() {
     if(game.tomagochiArray[0].hunger > 9) {
         alert('I starved, isnt that fun');
         clearInterval(timer);
+        $('.dancing').hide();
     } else if (game.tomagochiArray[0].hunger < 0) {
         alert('I died from obesity');
         clearInterval(timer);
+        $('.dancing').hide();
     } 
 } 
 
@@ -69,20 +75,23 @@ function imHungry() {
 $('#myform').submit(function(e) {
     let userName = $("#input_name").val();
     event.preventDefault();
+    console.log(e);
     console.log(`the player has chosen the name ${userName}`);
     $('#userNameHere').append(`${userName}`);
-    if(e.target.id === 'myform') {
+    if(e.target.id === 'submit') {
         $(e.currentTarget).hide();}
 });
 
 //initializing the game
 $('#Load').on('click', (e) => {
-    // console.log($(e.target));
+    $('.dancing').show();
     if(e.target.tagName === 'BUTTON') {
     $(e.currentTarget).hide();
     game.createNewCharacture();
     
 }})
+
+
 
 // Starting the game 
 $('#Start').on('click', (e) => {

@@ -5,54 +5,98 @@
    display: block;
    margin-left: auto;
    margin-right: auto;
+   
 }
- 
+
  .rightstats {
-     position: absolute;
-     top: 30px;
-     right: 30px;
-     border: 3px solid black;
+    color: #327767;
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    top: 30px;
+    right: 30px; 
  }
  
  .rightstats_small {
+    color: #284C5C;
+    font-family: 'Permanent Marker', cursive;
     position: absolute;
     top: 90px;
     right: 30px;
-    border: 3px solid black;
 }
 
 .leftstats {
+    color: white;
+    font-family: 'Permanent Marker', cursive;
     position: absolute;
     top: 30px;
     left: 30px;
-    border: 3px solid black;
+    background-color: #3E5E6D;
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    
+}
+.stat-names {
+    color: #327767;
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    text-align: right;
+    top: 90px;
+    right: 60px;
+}
+
+span {
+    color: #284C5C;
+}
+
+#pet-age {
+    color:white;
+
+}
+
+
+#userNameHere {
+    color: #327767;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    position: absolute;
+    text-align: left;
+    top: 100px;
+    left: 40px;
 }
 
 .action-buttons{
     position: absolute;
     top: -70px;
     left: 30px;
-    border: 3px solid black;
+    
 }
 
 button {
     margin: 5px;
+    
 }
+
 .game-header {
     text-align: center;
     height: 70px;
+    border: 1px black;
+
 }
 
 .score {
     top: 150px;
     right: 40px;
-    position: absolute;
+    position: absolute;    
+
+
 }
 
 .start-info {
     text-align: center;
     position: relative;
-    top: -500px;
+    top: -500px;    
+
+
     
 
 }
@@ -69,12 +113,19 @@ button {
     left: 50px;
 }
 
-.animated-gif {
-    width: 200px;
+.dancing {
+    display: none;
+    width: 300px;
     height: auto;
     position: relative;
-    left: 50%;
-    top: -330px;
-    
+    left: 38%;
+    top: -1470px;
+}
 
+#death {
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    top: -450px;
+    text-align: center;
+    
 }
