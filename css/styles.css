@@ -1,3 +1,7 @@
+/* body {
+    background-image: url("/Users/balthazarely/school/sei_autumn_sweaters/classwork/7_2/tomagotchi_project_3/images/game_bg.png")
+} */
+
 .game-header {
     text-align: center;
     height: 100px;
@@ -8,8 +12,6 @@
     right: 40px;
     position: absolute;
 }
-
-
 
 .main-image {
     position: relative;
@@ -28,4 +30,33 @@
     top: 130px;
     left: 50px;
     width; 100%;
+}
+
+.start-info {
+    text-align: center;
+    top: -330px;
+
+}
+.top-stats {
+    position: absolute; 
+    top: 170px;
+    right: 50px;
+    width; 100%;
+}
+}
+
+.creature {
+    text-align: center;
+    top: 00px;
+    left: 50px;
+}
+
+.animated-gif {
+    width: 200px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: -330px;
+    
+
 }
