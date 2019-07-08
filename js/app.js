@@ -73,13 +73,14 @@ function imHungry() {
 
 //this takes username and appends to page
 $('#myform').submit(function(e) {
+    // console.log($(e.target));
     let userName = $("#input_name").val();
     event.preventDefault();
-    console.log(e);
     console.log(`the player has chosen the name ${userName}`);
     $('#userNameHere').append(`${userName}`);
-    if(e.target.id === 'submit') {
-        $(e.currentTarget).hide();}
+    if(e.target.tagName === 'form') {
+        $("#myform").hide();
+    }
 });
 
 //initializing the game
@@ -90,6 +91,14 @@ $('#Load').on('click', (e) => {
     game.createNewCharacture();
     
 }})
+
+// //animate the dude
+// $(document).ready(function(){
+//     $("#Start").click(function(){
+//       $(".dancing").animate({right: '500px'});
+//     });
+//   });
+
 
 
 
@@ -150,7 +159,3 @@ function iDead (){
     }
 };
 
-    // things that need to be added
-        // need to hide everything until load tamagahci button pressed
-        // all the css, etc.
-        // write instructions

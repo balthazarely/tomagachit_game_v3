@@ -12,17 +12,22 @@
 </head> 
 <body>
     <h1 class="game-header">Tomagachi</h1>
+    <div id="myform">
+            <form>
+                <input type="text" id="input_name" value="your name here"/>
+                <input type="submit" id="submit" value="submit" />
+            </form>
     <div class="relative"> <img src="/Users/balthazarely/school/sei_autumn_sweaters/classwork/7_2/tomagotchi_project_3/images/Artboard 3.png">
         <div class="rightstats"><h2> game clock <span id="clock">0</span></h2></div>
             <div class="rightstats_small">
-                <h4 id="hungry-stat">0</h4>
-                <h4 id="bored-stat">0</h4>
-                <h4 id="sleepyness-stat">0</h4>
+                <h5 id="hungry-stat">0</h>
+                <h5 id="bored-stat">0</h5>
+                <h5 id="sleepyness-stat">0</h5>
             </div>
             <div class="stat-names">
-                <h4>Hungry</h4> 
-                <h4>slapp</h4> 
-                <h4>fs</h4> 
+                <h5>Hungry</h5> 
+                <h5>Boredom</h5> 
+                <h5>Tiredness</h5> 
                 </div>
         <div class="leftstats">
             <h2> pet age: <span id="pet-age">0</span></h2> 
@@ -38,16 +43,16 @@
             <button id="bored">Play With Me!</button>
             <button id="sleepyness">Let Me Sleep!</button>
         </div>
+       <div class="instructions">
+           <a href="instructions.html"><button>Instructions</button></a>
+            <!-- <button id="instructions">Instructions</button> -->
+       </div>
     </div>
 
 
     <div class="relative">
         <div class="start-info">
-            <div id="myform">
-                <form>
-                    <input type="text" id="input_name"/>
-                    <input type="submit" id="submit" value="submit" />
-                </form>
+            
                 <button id="Load">Load your tomagachi!</button>
                 <div class="the-game-objects">
                 <button id="Start">Start the Game</button>
@@ -61,9 +66,14 @@
         </div>
     </div>
 
-    
+    <div>
+        
+    </div>
+    <div>
+        
+</div>
     <img class="dancing" src="/Users/balthazarely/school/sei_autumn_sweaters/classwork/7_2/tomagotchi_project_3/images/giphy (1).gif">
-
+</div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

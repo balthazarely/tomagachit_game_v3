@@ -1,12 +1,16 @@
-.relative {
-   position: relative;
-   width: 960px;
-   height: 540px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   
+body {
+    background-color: #D9F5FF;
 }
+
+.relative {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
  .rightstats {
     color: #327767;
@@ -50,10 +54,7 @@ span {
 
 #pet-age {
     color:white;
-
 }
-
-
 #userNameHere {
     color: #327767;
     font-family: 'Permanent Marker', cursive;
@@ -67,39 +68,43 @@ span {
 .action-buttons{
     position: absolute;
     top: -70px;
-    left: 30px;
-    
+    left: 30px; 
+}
+
+.instructions {
+    position: absolute;
+    top: -70px;
+    right: 30px; 
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
 }
 
 button {
     margin: 5px;
-    
+    border-radius: 5px;
 }
 
 .game-header {
     text-align: center;
-    height: 70px;
+    height: 50px;
     border: 1px black;
-
 }
 
 .score {
     top: 150px;
     right: 40px;
     position: absolute;    
-
-
 }
 
 .start-info {
     text-align: center;
     position: relative;
     top: -500px;    
-
-
-    
-
 }
+
 .top-stats {
     position: absolute; 
     top: 170px;
@@ -113,6 +118,14 @@ button {
     left: 50px;
 }
 
+
+#dancepls {
+    position: relative;
+    left: 38%;
+    top: -1270px;
+}
+
+
 .dancing {
     display: none;
     width: 300px;
@@ -124,8 +137,29 @@ button {
 
 #death {
     font-family: 'Permanent Marker', cursive;
-    position: absolute;
-    top: -450px;
-    text-align: center;
-    
+    text-align: center;   
 }
+
+form {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.instructionsText {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: #284C5C;
+    text-align: center;
+    padding: 20px;
+}
+
+.instructionsLower {
+    font-size: 20px;
+    color: #284C5C;
+    text-align: center;
+    margin: 25px 50px 25px 50px;
+}
+ .return {
+     text-align: center;
+ }
