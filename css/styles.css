@@ -104,6 +104,7 @@ h6 {
 h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: 50px;
+    padding: 50px;
 }
 
 button {
@@ -206,7 +207,7 @@ form {
     width: 300px;
     height: auto;
     position: relative;
-    left: 10%;
+    left: 16%;
     top: -1490px;
     animation-name: move;
     animation-duration: 8s;
@@ -221,3 +222,15 @@ form {
     transform: translateX(450px);
     }
 }
+
+.dancing-homer {
+    display: none;
+    width: 300px;
+    height: auto;
+    position: relative;
+    left: 16%;
+    top: -1490px;
+    animation-name: move;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}   

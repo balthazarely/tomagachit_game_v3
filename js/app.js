@@ -15,8 +15,6 @@ const game = {
         // console.log(this.tomagochiArray)  
     }}
 
-
-    
 // reload the page function
 $('#Reload').click(function() {
     location.reload();
@@ -39,15 +37,31 @@ function giveSleep() {
 })}
 
 // Functions to test conditions
+function gettingOlder() {
+    if(seconds === 10) {
+        alert("congrats! you were able to keep Ned long enough to get a Homer!")
+        $('.dancing').hide();
+        $('.dancing-homer').show();
+    }
+}
+
+
+    // let timer2 = $('#clock').text;
+    // console.log(timer2);
+    // }
+
+
 function imBored() {
     if(game.tomagochiArray[0].boredom > 9) {
         // alert('I died of boredom. didnt think that was possible');
         clearInterval(timer);
         $('.dancing').hide();
+        $('.dancing-homer').hide();
     } else if (game.tomagochiArray[0].boredom < 0) {
         // alert('I died from overaly stimulated');
         clearInterval(timer);
         $('.dancing').hide();
+        $('.dancing-homer').hide();
     } 
 } 
 function imSleepy() {
@@ -55,10 +69,12 @@ function imSleepy() {
         // alert('I died from exhaustion');
         clearInterval(timer);
         $('.dancing').hide();
+        $('.dancing-homer').hide();
     } else if (game.tomagochiArray[0].sleepyness < 0) {
         // alert('I am dead cause i overslept');
         clearInterval(timer);
         $('.dancing').hide();
+        $('.dancing-homer').hide();
     } 
 } 
 function imHungry() {
@@ -66,10 +82,12 @@ function imHungry() {
         // alert('I starved, isnt that fun');
         clearInterval(timer);
         $('.dancing').hide();
+        $('.dancing-homer').hide();
     } else if (game.tomagochiArray[0].hunger < 0) {
         // alert('I died from obesity');
         clearInterval(timer);
         $('.dancing').hide();
+        $('.dancing-homer').hide();
     } 
 } 
 
@@ -81,9 +99,7 @@ $('#myform').submit(function(e) {
     console.log(`the player has chosen the name ${userName}`);
     $('#userNameHere').append(`${userName}`);
     //pt 1 of the issues i am having
-    if(e.target.tagName === 'form') {
         $("#myform").hide();
-    }
 });
 
 //initializing the game
@@ -103,13 +119,13 @@ $('#Start').on('click', (e) => {
             $(e.currentTarget).hide();}
         timer = setInterval(function(){
             seconds ++;
-            if(seconds % 1 === 0){
+            if(seconds % 3 === 0){
                 game.tomagochiArray[0].hunger ++; 
             }
-            if(seconds % 1 === 0){
+            if(seconds % 2 === 0){
                 game.tomagochiArray[0].sleepyness ++;
             } 
-            if(seconds % 1 === 0){
+            if(seconds % 2 === 0){
                 game.tomagochiArray[0].boredom ++;
             }
             if(seconds % 10 === 0){
@@ -122,24 +138,13 @@ $('#Start').on('click', (e) => {
             $('#sleepyness-stat').text(game.tomagochiArray[0].sleepyness);
             $('#pet-age').text(game.tomagochiArray[0].age);
         // this is testing our creatures condtions
+            gettingOlder();
             imBored();
             imHungry();
             imSleepy();
             iDead();
         }, 1000)
     }})
-
-//animate the gif
-// $("#letsboogie").click(function(){
-//     $(".letsboogie").animate({
-//         right: '500px'});
-//   }, 1000);
-// });
-
-// $("#dancetime").on("click", function(){
-//     $(".letsdance").animate({width: '100px'});
-//     }); 
-
 
 
 
