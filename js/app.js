@@ -94,6 +94,7 @@ function imHungry() {
     } 
 } 
 
+
 //this takes username and appends to page
 $('#myform').submit(function(e) {
     let userName = $("#input_name").val();
