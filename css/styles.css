@@ -68,6 +68,15 @@ h6 {
     left: 40px;
 }
 
+#homerMessage {
+    color: indianred;
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    text-align: left;
+    top: 142px;
+    left: 40px;
+}
+
 #userNameHere {
     background: -webkit-linear-gradient(#283c86, #45a247);
     -webkit-background-clip: text;
@@ -99,13 +108,6 @@ h6 {
     left: 30px; 
 }
 
-#letsboogie {
-    font-family: 'Lato', sans-serif;
-    color: white;
-    font-weight: bold;
-    background: linear-gradient(to right, #284C5C, green);
-}
-
 .instructions {
     position: absolute;
     top: -70px;
@@ -126,7 +128,7 @@ button {
 
 .game-header {
     text-align: center;
-    height: 50px;
+    height: 43px;
     background: -webkit-linear-gradient(#283c86, #45a247);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -160,6 +162,10 @@ button {
 #death {
     font-family: 'Permanent Marker', cursive;
     text-align: center;   
+    color: white;
+    background: linear-gradient(to right, #327767, #6faf7b);
+    border-radius: 5px;
+    border: none;
 }
 
 form {
@@ -219,7 +225,7 @@ form {
     height: auto;
     position: relative;
     left: 16%;
-    top: -1490px;
+    top: -1475px;
     animation-name: move;
     animation-duration: 8s;
     animation-iteration-count: infinite;
@@ -240,7 +246,7 @@ form {
     height: auto;
     position: relative;
     left: 16%;
-    top: -1490px;
+    top: -1475px;
     animation-name: move;
     animation-duration: 8s;
     animation-iteration-count: infinite;
@@ -252,7 +258,7 @@ form {
     height: auto;
     position: relative;
     left: -10%;
-    top: -1490px;
+    top: -1475px;
     animation-name: move;
     animation-duration: 8s;
     animation-iteration-count: infinite;
