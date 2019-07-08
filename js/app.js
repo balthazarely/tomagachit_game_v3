@@ -9,10 +9,7 @@ const game = {
     createNewCharacture(){
         const newCharacture = new Tomagochi;
         newCharacture.greetings();
-        // console.log(this, '<---this');
         this.tomagochiArray.push(newCharacture)
-        // console.log(newCharacture);
-        // console.log(this.tomagochiArray)  
     }}
 
 // reload the page function
@@ -40,35 +37,34 @@ function giveSleep() {
 
 //transform from ned to homer
 function gettingOlder() {
-    if(seconds === 15) {
+    if(seconds === 10) {
         $('.dancing').hide();
         $('.dancing-homer').show();
+        $('#userNameHere').remove();
     }
 }
 
+function newName() {
+    if(seconds === 10) {
+        $('#userHomerHere').append("Homer");
+    }
+}
+
+// get explosion when transform happens
 function explosion() {
-    if(seconds === 15) {
+    if(seconds === 10) {
         $('.explosion').show();
     } else {
         $('.explosion').hide();
     }
 }
 
-// function gettingOlderv2() {
-//     if(seconds === 20) {
-//         $('.dancing-homer').hide();
-//         $('.dancing').show();
-//     }
-// }
-
 function imBored() {
     if(game.tomagochiArray[0].boredom > 9) {
-        // alert('I died of boredom. didnt think that was possible');
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
     } else if (game.tomagochiArray[0].boredom < 0) {
-        // alert('I died from overaly stimulated');
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
@@ -76,12 +72,10 @@ function imBored() {
 } 
 function imSleepy() {
     if(game.tomagochiArray[0].sleepyness > 9) {
-        // alert('I died from exhaustion');
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
     } else if (game.tomagochiArray[0].sleepyness < 0) {
-        // alert('I am dead cause i overslept');
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
@@ -89,12 +83,10 @@ function imSleepy() {
 } 
 function imHungry() {
     if(game.tomagochiArray[0].hunger > 9) {
-        // alert('I starved, isnt that fun');
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
     } else if (game.tomagochiArray[0].hunger < 0) {
-        // alert('I died from obesity');
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
@@ -103,12 +95,10 @@ function imHungry() {
 
 //this takes username and appends to page
 $('#myform').submit(function(e) {
-    // console.log($(e.target));
     let userName = $("#input_name").val();
     event.preventDefault();
     console.log(`the player has chosen the name ${userName}`);
     $('#userNameHere').append(`${userName}`);
-    //pt 1 of the issues i am having
         $("#myform").hide();
 });
 
@@ -150,6 +140,7 @@ $('#Start').on('click', (e) => {
         // this is testing our creatures condtions
             gettingOlder();
             explosion();
+            newName();
             // gettingOlderv2();
             imBored();
             imHungry();
@@ -157,8 +148,6 @@ $('#Start').on('click', (e) => {
             iDead();
         }, 1000)
     }})
-
-
 
 //These are decreasing the values of our stats via buttons
 giveFood();

@@ -69,7 +69,18 @@ h6 {
 }
 
 #userNameHere {
-    /* color: #327767; */
+    background: -webkit-linear-gradient(#283c86, #45a247);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    position: absolute;
+    text-align: left;
+    top: 100px;
+    left: 40px;
+}
+
+#userHomerHere {
     background: -webkit-linear-gradient(#283c86, #45a247);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
