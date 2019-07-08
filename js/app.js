@@ -161,9 +161,9 @@ function iDead (){
     } else if(game.tomagochiArray[0].hunger > 9) {
         $('#death').append("If you dont feed me, im gonna die. just like a real person");
     } else if(game.tomagochiArray[0].boredom > 9) {
-        $('#death').append("its true, you can get so bored you atually die");
+        $('#death').append("its true, you can get so bored you actually die");
     } else if(game.tomagochiArray[0].sleepyness < 0) {
-        $('#death').append("There is such a thing as too much sleep. i died");
+        $('#death').append("There is such a thing as too much sleep. I died");
     } else if(game.tomagochiArray[0].hunger < 0) {
         $('#death').append("You cant feed me that much and expect me to live....");
     } else if(game.tomagochiArray[0].boredom < 0) {
