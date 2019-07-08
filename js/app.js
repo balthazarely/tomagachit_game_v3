@@ -37,19 +37,29 @@ function giveSleep() {
 })}
 
 // Functions to test conditions
+
+//transform from ned to homer
 function gettingOlder() {
-    if(seconds === 10) {
-        alert("congrats! you were able to keep Ned long enough to get a Homer!")
+    if(seconds === 15) {
         $('.dancing').hide();
         $('.dancing-homer').show();
     }
 }
 
+function explosion() {
+    if(seconds === 15) {
+        $('.explosion').show();
+    } else {
+        $('.explosion').hide();
+    }
+}
 
-    // let timer2 = $('#clock').text;
-    // console.log(timer2);
-    // }
-
+// function gettingOlderv2() {
+//     if(seconds === 20) {
+//         $('.dancing-homer').hide();
+//         $('.dancing').show();
+//     }
+// }
 
 function imBored() {
     if(game.tomagochiArray[0].boredom > 9) {
@@ -139,6 +149,8 @@ $('#Start').on('click', (e) => {
             $('#pet-age').text(game.tomagochiArray[0].age);
         // this is testing our creatures condtions
             gettingOlder();
+            explosion();
+            // gettingOlderv2();
             imBored();
             imHungry();
             imSleepy();
@@ -156,7 +168,7 @@ giveSleep();
 //this takes the death and appends to page
 function iDead (){
     if(game.tomagochiArray[0].sleepyness > 9) {
-        $('#death').append("You made me sleep all the time. of course im dead");
+        $('#death').append("You never let me sleep.... of course im dead");
     } else if(game.tomagochiArray[0].hunger > 9) {
         $('#death').append("well if you dont feed me, im gonna die. just like a real person");
     } else if(game.tomagochiArray[0].boredom > 9) {

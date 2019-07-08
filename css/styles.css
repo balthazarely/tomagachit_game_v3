@@ -219,7 +219,7 @@ form {
     transform: translateX(0);
     }
     50% {
-    transform: translateX(450px);
+    transform: translateX(650px);
     }
 }
 
@@ -234,3 +234,15 @@ form {
     animation-duration: 8s;
     animation-iteration-count: infinite;
 }   
+
+.explosion {
+    display: none;
+    width: 300px;
+    height: auto;
+    position: relative;
+    left: -10%;
+    top: -1490px;
+    animation-name: move;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
