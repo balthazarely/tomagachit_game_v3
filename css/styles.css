@@ -134,6 +134,7 @@ button {
     -webkit-text-fill-color: transparent;
 }
 
+
 .score {
     top: 150px;
     right: 40px;
@@ -250,6 +251,7 @@ form {
     animation-name: move;
     animation-duration: 8s;
     animation-iteration-count: infinite;
+     
 }   
 
 .explosion {
