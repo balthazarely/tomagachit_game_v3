@@ -1,9 +1,9 @@
 body {
     background-image: url("/Users/balthazarely/school/sei_autumn_sweaters/classwork/7_2/tomagotchi_project_3/images/game_bg transparent.png");
-    height: 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 200%;   
+    /* background-position: center top; */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .relative {
@@ -82,15 +82,17 @@ h6 {
 }
 
 .action-buttons{
+    font-family: 'Lato', sans-serif;
     position: absolute;
     top: -70px;
     left: 30px; 
 }
 
 #letsboogie {
+    font-family: 'Lato', sans-serif;
     color: white;
     font-weight: bold;
-    background: linear-gradient(to right, cyan, green,  blue, violet);
+    background: linear-gradient(to right, #284C5C, green);
 }
 
 .instructions {
@@ -107,6 +109,7 @@ h1 {
 button {
     margin: 5px;
     border-radius: 5px;
+    border: none;
 }
 
 .game-header {
@@ -126,7 +129,7 @@ button {
 .start-info {
     text-align: center;
     position: relative;
-    top: -500px;    
+    top: -520px;    
 }
 
 .top-stats {
@@ -148,25 +151,34 @@ button {
 }
 
 form {
+    font-size: 1
+    font-family: 'Lato', sans-serif;
     position: relative;
     text-align: center;
     padding: 20px;
 }
 
 #instructionsBtn{
+    font-family: 'Lato', sans-serif;
     background-color: #327767;
     color: white;
+    outline: none;
 }
 
 #returnBtn{
+    font-family: 'Lato', sans-serif;
     background-color: #327767;
     color: white;
+    outline: none;
 }
 
-
-#load {
-    background-color: #327767;
+.bottombtn {
+    font-family: 'Permanent Marker', cursive;
+    font-kerning: auto;
     color: white;
+    background: indianred;
+    font-size: 20px;
+    outline: none;
 }
 
 .instructionsText {
@@ -178,6 +190,7 @@ form {
 }
 
 .instructionsLower {
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     color: #284C5C;
     text-align: center;
@@ -185,6 +198,7 @@ form {
 }
  .return {
      text-align: center;
+     
  }
 
  .dancing {

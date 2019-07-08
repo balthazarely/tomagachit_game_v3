@@ -91,15 +91,7 @@ $('#Load').on('click', (e) => {
     if(e.target.tagName === 'BUTTON') {
     $(e.currentTarget).hide();
     game.createNewCharacture();
-    
 }})
-
-// $("#letsboogie").click(function(){
-//     $(".letsboogie").animate({
-//         right: '500px'});
-//   }, 1000);
-// });
-
 
 // Starting the game 
 $('#Start').on('click', (e) => {
@@ -138,6 +130,11 @@ $('#Start').on('click', (e) => {
 
 
 //animate the dude
+// $("#letsboogie").click(function(){
+//     $(".letsboogie").animate({
+//         right: '500px'});
+//   }, 1000);
+// });
 
 
 
