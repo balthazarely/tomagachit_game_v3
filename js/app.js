@@ -80,6 +80,7 @@ $('#myform').submit(function(e) {
     event.preventDefault();
     console.log(`the player has chosen the name ${userName}`);
     $('#userNameHere').append(`${userName}`);
+    //pt 1 of the issues i am having
     if(e.target.tagName === 'form') {
         $("#myform").hide();
     }
@@ -128,14 +129,16 @@ $('#Start').on('click', (e) => {
         }, 1000)
     }})
 
-
-//animate the dude
+//animate the gif
 // $("#letsboogie").click(function(){
 //     $(".letsboogie").animate({
 //         right: '500px'});
 //   }, 1000);
 // });
 
+// $("#dancetime").on("click", function(){
+//     $(".letsdance").animate({width: '100px'});
+//     }); 
 
 
 
@@ -148,7 +151,7 @@ giveSleep();
 //this takes the death and appends to page
 function iDead (){
     if(game.tomagochiArray[0].sleepyness > 9) {
-        $('#death').append("You are a sicko that makes me sleep all the time. of course im dead");
+        $('#death').append("You made me sleep all the time. of course im dead");
     } else if(game.tomagochiArray[0].hunger > 9) {
         $('#death').append("well if you dont feed me, im gonna die. just like a real person");
     } else if(game.tomagochiArray[0].boredom > 9) {
@@ -156,7 +159,7 @@ function iDead (){
     } else if(game.tomagochiArray[0].sleepyness < 0) {
         $('#death').append("i am no rave creature, i must sleep at some point. i died");
     } else if(game.tomagochiArray[0].hunger < 0) {
-        $('#death').append("more people die in america from being overed rather than under.... like me");
+        $('#death').append("You cant feed me that much and expect me to live....");
     } else if(game.tomagochiArray[0].boredom < 0) {
         $('#death').append("i appreciated all the play time, but it oddly killed me");
     }

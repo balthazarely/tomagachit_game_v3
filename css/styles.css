@@ -196,9 +196,9 @@ form {
     text-align: center;
     margin: 25px 50px 25px 50px;
 }
+
  .return {
      text-align: center;
-     
  }
 
  .dancing {
@@ -206,8 +206,18 @@ form {
     width: 300px;
     height: auto;
     position: relative;
-    left: 38%;
-    top: -1470px;
- 
+    left: 10%;
+    top: -1490px;
+    animation-name: move;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}   
 
-    
+@keyframes move {
+    0% 100% {
+    transform: translateX(0);
+    }
+    50% {
+    transform: translateX(450px);
+    }
+}
