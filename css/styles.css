@@ -1,5 +1,9 @@
 body {
-    background-color: #D9F5FF;
+    background-image: url("/Users/balthazarely/school/sei_autumn_sweaters/classwork/7_2/tomagotchi_project_3/images/game_bg transparent.png");
+    height: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .relative {
@@ -10,7 +14,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
 
  .rightstats {
     color: #327767;
@@ -36,9 +39,9 @@ body {
     left: 30px;
     background-color: #3E5E6D;
     padding: 5px 10px 5px 10px;
-    border-radius: 8px;
-    
+    border-radius: 8px;  
 }
+
 .stat-names {
     color: #327767;
     font-family: 'Permanent Marker', cursive;
@@ -55,10 +58,23 @@ span {
 #pet-age {
     color:white;
 }
-#userNameHere {
+
+h6 {
     color: #327767;
     font-family: 'Permanent Marker', cursive;
-    font-size: 50px;
+    position: absolute;
+    text-align: left;
+    top: 90px;
+    left: 40px;
+}
+
+#userNameHere {
+    /* color: #327767; */
+    background: -webkit-linear-gradient(#283c86, #45a247);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
     position: absolute;
     text-align: left;
     top: 100px;
@@ -69,6 +85,12 @@ span {
     position: absolute;
     top: -70px;
     left: 30px; 
+}
+
+#letsboogie {
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right, cyan, green,  blue, violet);
 }
 
 .instructions {
@@ -90,7 +112,9 @@ button {
 .game-header {
     text-align: center;
     height: 50px;
-    border: 1px black;
+    background: -webkit-linear-gradient(#283c86, #45a247);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .score {
@@ -118,23 +142,6 @@ button {
     left: 50px;
 }
 
-
-#dancepls {
-    position: relative;
-    left: 38%;
-    top: -1270px;
-}
-
-
-.dancing {
-    display: none;
-    width: 300px;
-    height: auto;
-    position: relative;
-    left: 38%;
-    top: -1470px;
-}
-
 #death {
     font-family: 'Permanent Marker', cursive;
     text-align: center;   
@@ -144,6 +151,22 @@ form {
     position: relative;
     text-align: center;
     padding: 20px;
+}
+
+#instructionsBtn{
+    background-color: #327767;
+    color: white;
+}
+
+#returnBtn{
+    background-color: #327767;
+    color: white;
+}
+
+
+#load {
+    background-color: #327767;
+    color: white;
 }
 
 .instructionsText {
@@ -163,3 +186,14 @@ form {
  .return {
      text-align: center;
  }
+
+ .dancing {
+    display: none;
+    width: 300px;
+    height: auto;
+    position: relative;
+    left: 38%;
+    top: -1470px;
+ 
+
+    

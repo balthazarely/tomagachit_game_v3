@@ -15,6 +15,8 @@ const game = {
         // console.log(this.tomagochiArray)  
     }}
 
+
+    
 // reload the page function
 $('#Reload').click(function() {
     location.reload();
@@ -39,33 +41,33 @@ function giveSleep() {
 // Functions to test conditions
 function imBored() {
     if(game.tomagochiArray[0].boredom > 9) {
-        alert('I died of boredom. didnt think that was possible');
+        // alert('I died of boredom. didnt think that was possible');
         clearInterval(timer);
         $('.dancing').hide();
     } else if (game.tomagochiArray[0].boredom < 0) {
-        alert('I died from overaly stimulated');
+        // alert('I died from overaly stimulated');
         clearInterval(timer);
         $('.dancing').hide();
     } 
 } 
 function imSleepy() {
     if(game.tomagochiArray[0].sleepyness > 9) {
-        alert('I died from exhaustion');
+        // alert('I died from exhaustion');
         clearInterval(timer);
         $('.dancing').hide();
     } else if (game.tomagochiArray[0].sleepyness < 0) {
-        alert('I am dead cause i overslept');
+        // alert('I am dead cause i overslept');
         clearInterval(timer);
         $('.dancing').hide();
     } 
 } 
 function imHungry() {
     if(game.tomagochiArray[0].hunger > 9) {
-        alert('I starved, isnt that fun');
+        // alert('I starved, isnt that fun');
         clearInterval(timer);
         $('.dancing').hide();
     } else if (game.tomagochiArray[0].hunger < 0) {
-        alert('I died from obesity');
+        // alert('I died from obesity');
         clearInterval(timer);
         $('.dancing').hide();
     } 
@@ -92,14 +94,11 @@ $('#Load').on('click', (e) => {
     
 }})
 
-// //animate the dude
-// $(document).ready(function(){
-//     $("#Start").click(function(){
-//       $(".dancing").animate({right: '500px'});
-//     });
-//   });
-
-
+// $("#letsboogie").click(function(){
+//     $(".letsboogie").animate({
+//         right: '500px'});
+//   }, 1000);
+// });
 
 
 // Starting the game 
@@ -136,6 +135,13 @@ $('#Start').on('click', (e) => {
             iDead();
         }, 1000)
     }})
+
+
+//animate the dude
+
+
+
+
 
 //These are decreasing the values of our stats via buttons
 giveFood();
