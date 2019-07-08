@@ -252,6 +252,15 @@ form {
     animation-duration: 8s;
     animation-iteration-count: infinite;
      
+} 
+
+.gameover {
+    display: none;
+    width: 300px;
+    height: auto;
+    position: relative;
+    left: 35%;
+    top: -1410px;
 }   
 
 .explosion {

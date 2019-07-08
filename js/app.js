@@ -50,7 +50,6 @@ function newName() {
         $('#homerMessage').append("Your pet has chosen its own name");
     } 
 }
-
 // get explosion when transform happens
 function explosion() {
     if(seconds === 15) {
@@ -65,10 +64,12 @@ function imBored() {
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
+        $('.gameover').show();
     } else if (game.tomagochiArray[0].boredom < 0) {
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
+        $('.gameover').show();
     } 
 } 
 function imSleepy() {
@@ -76,10 +77,12 @@ function imSleepy() {
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
+        $('.gameover').show();
     } else if (game.tomagochiArray[0].sleepyness < 0) {
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
+        $('.gameover').show();
     } 
 } 
 function imHungry() {
@@ -87,10 +90,12 @@ function imHungry() {
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
+        $('.gameover').show();
     } else if (game.tomagochiArray[0].hunger < 0) {
         clearInterval(timer);
         $('.dancing').hide();
         $('.dancing-homer').hide();
+        $('.gameover').show();
     } 
 } 
 
