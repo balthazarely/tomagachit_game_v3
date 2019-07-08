@@ -158,7 +158,6 @@ giveSleep();
 function iDead (){
     if(game.tomagochiArray[0].sleepyness > 9) {
         $('#death').append("You never let me sleep.... of course im dead");
-        $('#death').append(`I survived to age ${game.tomagochiArray[0].age}');
     } else if(game.tomagochiArray[0].hunger > 9) {
         $('#death').append("If you dont feed me, im gonna die. just like a real person");
     } else if(game.tomagochiArray[0].boredom > 9) {
